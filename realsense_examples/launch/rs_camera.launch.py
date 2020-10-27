@@ -26,5 +26,7 @@ def generate_launch_description():
         node_executable='realsense_node',
         node_namespace='',
         output='screen',
+        parameters=[{'enable_pointcloud': True,
+                'dense_pointcloud' : False}]
         )
     return launch.LaunchDescription([rgbd_node])
