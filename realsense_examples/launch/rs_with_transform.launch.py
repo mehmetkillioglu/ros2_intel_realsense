@@ -31,9 +31,10 @@ def generate_launch_description():
         )
     static_publisher_node = Node(package='tf2_ros',
              node_executable='static_transform_publisher',
+             node_namespace='',
              output='screen',
              arguments=[
-		 '-0.385', '0.004', '0.398', '3.14', '0.0', '3.14', 
+		 '-0.315', '0.004', '0.398', '3.14', '0.0', '3.14', 
                  'base_link', 'camera_link'
-             ]),
+             ])
     return launch.LaunchDescription([rgbd_node,static_publisher_node])
